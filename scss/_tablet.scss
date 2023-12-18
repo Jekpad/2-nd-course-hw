@@ -1,0 +1,10 @@
+@media (width <= 1250px) {
+  .center {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .game {
+    grid-template-columns: repeat(2, 378px);
+  }
+}

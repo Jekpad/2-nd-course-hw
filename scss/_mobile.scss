@@ -1,0 +1,9 @@
+@media (width <= 860px) {
+  .h1 {
+    font-size: 2.5em;
+  }
+
+  .game {
+    grid-template-columns: repeat(1, 378px);
+  }
+}

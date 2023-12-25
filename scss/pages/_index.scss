@@ -1,0 +1,67 @@
+@use "mixins";
+
+.top {
+  height: 1024px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%), url("../img/topbg.jpg"), lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__content {
+    padding-top: 217px;
+  }
+
+  &__title {
+    max-width: 788px;
+  }
+
+  &__text {
+    padding-top: 32px;
+    max-width: 481px;
+  }
+
+  &__button {
+    margin-top: 44px;
+  }
+}
+
+.game {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  display: grid;
+  grid-template-columns: repeat(3, 378px);
+  grid-template-rows: auto;
+  grid-gap: 32px;
+  justify-content: center;
+
+  &-card {
+    grid-column: span 1;
+    height: 300px;
+    border-radius: 16px;
+    cursor: pointer;
+    position: relative;
+
+    &__name {
+      position: absolute;
+      left: 32px;
+      bottom: 32px;
+
+      font-size: 1.3333em;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+    }
+
+    &_1 {
+      @include mixins.game-card-image("game1.jpg");
+    }
+
+    &_2 {
+      @include mixins.game-card-image("game2.jpg");
+    }
+
+    &_3 {
+      @include mixins.game-card-image("game3.jpg");
+    }
+  }
+}

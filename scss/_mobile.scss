@@ -1,9 +1,46 @@
-@media (width <= 860px) {
+@media (width <= 890px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .top {
+    height: 735px;
+
+    &__content {
+      padding-top: 238px;
+    }
+  }
+
   .h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .game {
     grid-template-columns: repeat(1, 378px);
+  }
+
+  .play {
+    &__title {
+      font-size: 2em;
+    }
+
+    &__text {
+      font-size: 0.7778em;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 22px;
+    }
+  }
+}
+
+@media (width <= 425px) {
+  .game {
+    grid-template-columns: repeat(1, 1fr);
+    
+    &-card {
+      background-size: cover;
+      background-position: center;
+    }
   }
 }

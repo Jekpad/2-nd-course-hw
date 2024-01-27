@@ -26,7 +26,7 @@ alert(result);
 
 // 6
 a = 9;
-b = 2;
+let b = 2;
 alert(a % b);
 
 // 7

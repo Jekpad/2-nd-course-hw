@@ -77,3 +77,4 @@ else if (clientOS.indexOf("Linux") != -1) OS = "Linux";
 console.log(`Установите версию приложения для ${OS} по ссылке`);
 
 // 9
+// ???

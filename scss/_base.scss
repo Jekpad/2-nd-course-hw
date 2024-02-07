@@ -17,7 +17,7 @@ html {
   box-sizing: border-box;
 }
 
-picture img{
+picture img {
   width: 100%;
   height: auto;
 }
@@ -59,6 +59,10 @@ body {
   display: flex;
   justify-content: space-between;
   flex-flow: row;
+
+  &_inverted {
+    flex-flow: row-reverse;
+  }
 
   &__info {
     display: flex;

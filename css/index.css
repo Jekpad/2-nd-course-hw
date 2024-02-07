@@ -114,6 +114,9 @@ body {
   justify-content: space-between;
   flex-flow: row;
 }
+.play_inverted {
+  flex-flow: row-reverse;
+}
 .play__info {
   display: flex;
   flex-flow: column;

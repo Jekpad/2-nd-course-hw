@@ -1,7 +1,7 @@
 // 1
 let password = "aswxca";
-let userPassword = prompt(`Введите пароль`);
-password === userPassword ? alert(`Пароль введен верно`) : alert(`Пароль введен неправильно`);
+// let userPassword = prompt(`Введите пароль`);
+// password === userPassword ? alert(`Пароль введен верно`) : alert(`Пароль введен неправильно`);
 
 // 2
 let c = 2;
@@ -18,10 +18,11 @@ console.log(result);
 let a = "2";
 let b = "3";
 // Код выше изменять менять нельзя, чтобы решить задачу исправьте код ниже:
-alert(+a + +b);
+// alert(+a + +b);
 
 // 5
-let monthNumber = Number(prompt(`Введите номер месяца`));
+let monthNumber = prompt(`Введите номер месяца`);
+monthNumber = +monthNumber;
 switch (monthNumber) {
   case 1:
   case 2:
@@ -52,18 +53,17 @@ switch (monthNumber) {
 // Вёрстка
 
 // 7
-let inputNumber = Number(prompt(`Пожалуйста, введите любое число`));
-if (typeof inputNumber !== "number" || isNaN(inputNumber)) {
-  alert(`Вы ввели не число`);
-} else if (inputNumber === 0) {
-  alert(`Вы указали 0`);
-} else {
-  if (inputNumber % 2 === 0) {
+let inputNumber = prompt(`Пожалуйста, введите любое число`);
+if (!isNaN(inputNumber)) {
+  if (inputNumber % 2 == 0) {
     alert(`Число четное`);
   } else {
     alert(`Число нечетное`);
   }
+} else {
+  alert(`Вы ввели не число`);
 }
+
 // 8
 let clientOS = window.navigator.userAgent;
 let clientDeviceYear = 0;
@@ -74,29 +74,7 @@ else if (clientOS.indexOf("Win") != -1) OS = "Windows";
 else if (clientOS.indexOf("Mac") != -1) OS = "MacOS";
 else if (clientOS.indexOf("X11") != -1) OS = "UNIX";
 else if (clientOS.indexOf("Linux") != -1) OS = "Linux";
-let message = OS.length === 0 ? "Воспользуйтесь WEB-версией по ссылке" : `Установите версию приложения для ${OS} по ссылке`;
-console.log(message);
-
-// 8 v2
-clientOS = 2;
-clientDeviceYear = 0;
-OS = "";
-if (clientOS === 1) OS = "Android";
-else if (clientOS === 0) OS = "iOS";
-else OS = "";
-message = OS.length === 0 ? "Воспользуйтесь WEB-версией по ссылке" : `Установите версию приложения для ${OS} по ссылке`;
-console.log(message);
+console.log(`Установите версию приложения для ${OS} по ссылке`);
 
 // 9
-clientOS = 1;
-clientDeviceYear = 2014;
-OS = "";
-
-if (clientOS === 1) {
-  OS = clientDeviceYear >= 2015 ? "Android" : (OS = "Android LTS");
-} else if (clientOS === 0) {
-  OS = clientDeviceYear >= 2015 ? "iOS" : (OS = "iOS LTS");
-} else OS = "";
-
-message = OS.length === 0 ? "Воспользуйтесь WEB-версией по ссылке" : `Установите версию приложения для ${OS} по ссылке`;
-console.log(message);
+// ???

@@ -10,7 +10,6 @@ html {
   padding: 0;
   font-size: 18px;
   color: vars.$color-base;
-  cursor: url("../res/cursors/default.svg"), auto;
 }
 
 *::before,
@@ -51,12 +50,7 @@ body {
   display: block;
   width: fit-content;
   text-decoration: none;
-  cursor: url("../res/cursors/pointer.svg"), pointer;
-
-  &:hover,
-  &:focus {
-    background: rgb(235 68 63);
-  }
+  cursor: pointer;
 }
 
 .play {

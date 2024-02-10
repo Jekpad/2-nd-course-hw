@@ -38,15 +38,8 @@
     grid-column: span 1;
     height: 300px;
     border-radius: 16px;
+    cursor: pointer;
     position: relative;
-    box-sizing: border-box;
-    cursor: url("../../res/cursors/pointer.svg"), pointer;
-    border: 3px solid transparent;
-
-    &:hover,
-    &:focus {
-      border: 3px solid rgb(68 210 255);
-    }
 
     &__name {
       position: absolute;

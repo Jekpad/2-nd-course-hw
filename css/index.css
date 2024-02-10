@@ -63,7 +63,6 @@ html {
   padding: 0;
   font-size: 18px;
   color: #fff;
-  cursor: url("../res/cursors/default.svg"), auto;
 }
 
 *::before,
@@ -105,10 +104,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   text-decoration: none;
-  cursor: url("../res/cursors/pointer.svg"), pointer;
-}
-.button:hover, .button:focus {
-  background: rgb(235, 68, 63);
+  cursor: pointer;
 }
 
 .play {
@@ -170,13 +166,8 @@ body {
   grid-column: span 1;
   height: 300px;
   border-radius: 16px;
+  cursor: pointer;
   position: relative;
-  box-sizing: border-box;
-  cursor: url("../../res/cursors/pointer.svg"), pointer;
-  border: 3px solid transparent;
-}
-.game-card:hover, .game-card:focus {
-  border: 3px solid rgb(68, 210, 255);
 }
 .game-card__name {
   position: absolute;

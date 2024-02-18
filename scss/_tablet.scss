@@ -1,57 +1,61 @@
 @media (width <= 1250px) {
-  .center {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .top {
-    height: 880px;
-    
-    &__content{
-      display: flex;
-      flex-flow: column;
-      align-items: center;
+    .center {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
-    &__title {
-      text-align: center;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
+    .top {
+        height: 880px;
+
+        &__content {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        &__title {
+            text-align: center;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        &__text {
+            text-align: center;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; /* 157.143% */
+        }
     }
 
-    &__text {
-      text-align: center;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 22px; /* 157.143% */
-    }
-  }
-
-  .game {
-    padding-top: 128px;
-    padding-bottom: 128px;
-    grid-template-columns: repeat(2, 378px);
-  }
-
-  .play {
-    padding-top: 51px;
-    padding-bottom: 51px;
-    flex-flow: column;
-    gap: 64px;
-    align-items: center;
-
-    &__info {
-      max-width: none;
-      align-items: center;
+    .game {
+        padding-top: 128px;
+        padding-bottom: 128px;
+        grid-template-columns: repeat(2, 378px);
     }
 
-    &__title {
-      text-align: center;
-    }
+    .play {
+        padding-top: 51px;
+        padding-bottom: 51px;
+        flex-flow: column;
+        gap: 64px;
+        align-items: center;
 
-    &__text {
-      text-align: center;
+        &__info {
+            max-width: none;
+            align-items: center;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        &_center &__info {
+            width: auto;
+        }
     }
-  }
 }

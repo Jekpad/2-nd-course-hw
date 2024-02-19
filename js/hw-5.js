@@ -7,7 +7,7 @@ function compareNumbers(num1, num2) {
     if (!isVariableNumber(num1) || !isVariableNumber(num2)) {
         return "Одно или оба значения не являются числом";
     }
-    return num1 > num2 ? num2 : num2;
+    return num1 > num2 ? num1 : num2;
 }
 
 // 2
@@ -44,7 +44,13 @@ function numberPow(num) {
 askUserAge();
 
 function askUserAge() {
-    let year = Number(prompt("Сколько вам лет?"));
+    let year = prompt("Сколько вам лет?");
+
+    if (!isVariableNumber(year)) {
+        alert("Вы ввели неправильное значение!");
+        return;
+    }
+    year = Number(year);
 
     if (0 <= year && year <= 12) {
         alert("Привет, друг!");
@@ -52,14 +58,14 @@ function askUserAge() {
     } else if (year >= 13) {
         alert("Добро пожаловать!");
         return;
-    } else {
-        alert("Вы ввели неправильное значение!");
-        return;
     }
+
+    alert("Вы ввели неправильное значение!");
 }
 
 // 5
 console.log(checkVariables(num1, num2));
+
 function checkVariables(num1, num2) {
     if (!isVariableNumber(num1) || !isVariableNumber(num2)) {
         return "Одно или оба значения не являются числом";
@@ -72,13 +78,14 @@ function checkVariables(num1, num2) {
 userCube();
 
 function userCube() {
-    let number = Number(prompt("Введите число"));
+    let number = prompt("Введите число");
+
     if (!isVariableNumber(number)) {
-        alert("Переданный параметр не является число");
+        alert("Переданный параметр не является числом");
         return;
     }
-    alert("n в кубе равняется " + number ** 3);
-    return;
+    number = Number(number);
+    alert(`${number} в кубе равняется ` + number ** 3);
 }
 
 // 7
@@ -90,11 +97,11 @@ class Circle {
     }
 
     getArea() {
-        return (3.14 * this.radius ** 2).toFixed(2);
+        return (Math.PI * this.radius ** 2).toFixed(2);
     }
 
     getPerimeter() {
-        return (3.14 * this.radius * 2).toFixed(2);
+        return (Math.PI * this.radius * 2).toFixed(2);
     }
 }
 
@@ -110,5 +117,8 @@ console.log(circle2.getArea(), circle2.getPerimeter());
 
 // Остальное
 function isVariableNumber(variable) {
-    return typeof variable === "number" && !isNaN(variable);
+    if (parseInt(variable) === Number(variable) && !isNaN(variable) && typeof variable != "undefined") {
+        return true;
+    }
+    return false;
 }

@@ -1,63 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css?v2" />
-    <title>SkyPro 2 курс</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css?v2" />
+        <title>SkyPro 2 курс</title>
+    </head>
 
-  <body>
-    <div class="top center">
-      <div class="top__content">
-        <h1 class="h1 top__title">Добро пожаловать на мой сайт!</h1>
-        <p class="top__text">
-          Вам предстоит пройти несколько увлекательных игр. Если готов — нажимай <strong>поехали</strong> и <strong>приступай</strong>
-        </p>
-        <a class="button top__button" href="#">Поехали!</a>
-      </div>
-    </div>
-
-    <main class="center">
-      <div class="game">
-        <div class="game-card game-card_1">
-          <p class="game-card__name">Игра 1</p>
+    <body>
+        <div class="top center">
+            <div class="top__content">
+                <h1 class="h1 top__title">Добро пожаловать на мой сайт!</h1>
+                <p class="top__text">
+                    Вам предстоит пройти несколько увлекательных игр. Если готов — нажимай <strong>поехали</strong> и
+                    <strong>приступай</strong>
+                </p>
+                <a class="button top__button" href="#">Поехали!</a>
+            </div>
         </div>
 
-        <div class="game-card game-card_2">
-          <p class="game-card__name">Игра 2</p>
-        </div>
+        <main class="center">
+            <div class="game">
+                <div class="game-card game-card_1">
+                    <p class="game-card__name">Игра 1</p>
+                </div>
 
-        <div class="game-card game-card_3">
-          <p class="game-card__name">Игра 3</p>
-        </div>
-      </div>
+                <div class="game-card game-card_2">
+                    <p class="game-card__name">Игра 2</p>
+                </div>
 
-      <div class="play">
-        <div class="play__info">
-          <h2 class="h2 play__title">Времена года!</h2>
-          <p class="play__text">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому времени года он относится</p>
-          <button class="button">Играть</button>
-        </div>
-        <picture class="play__banner">
-          <img src="./img/undraw_video_game.svg" alt="Геймпад" srcset="" />
-        </picture>
-      </div>
-   
-      <div class="play play_inverted">
-          <div class="play__info">
-            <h2 class="h2 play__title">Запомни слова</h2>
-            <p class="play__text">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.</p>
-            <button class="button">Играть</button>
-          </div>
-          <picture class="play__banner">
-            <img src="./img/undraw_gaming_re_cma21.svg" alt="Геймпад" srcset="" />
-          </picture>
-        </div>
-      </main>
-    </main>
+                <div class="game-card game-card_3">
+                    <p class="game-card__name">Игра 3</p>
+                </div>
+            </div>
 
+            <div class="play">
+                <div class="play__info">
+                    <h2 class="h2 play__title" onclick="game1()">Времена года!</h2>
+                    <p class="play__text">
+                        Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому времени года он относится
+                    </p>
+                    <button class="button">Играть</button>
+                </div>
+                <picture class="play__banner">
+                    <img src="./img/undraw_video_game.svg" alt="Геймпад" srcset="" />
+                </picture>
+            </div>
 
-    <footer></footer>
-  </body>
+            <div class="play play_inverted">
+                <div class="play__info">
+                    <h2 class="h2 play__title">Запомни слова</h2>
+                    <p class="play__text">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.</p>
+                    <button class="button">Играть</button>
+                </div>
+                <picture class="play__banner">
+                    <img src="./img/undraw_gaming_re_cma21.svg" alt="Геймпад" srcset="" />
+                </picture>
+            </div>
+        </main>
+        <main>
+            <div class="play play_center play_questions">
+                <div class="play__info">
+                    <h2 class="h2 play__title">Игра в загадки</h2>
+                    <p class="play__text">
+                        Компьютер загадывает загадку, вам необходимо ее угадать, если вы дадите не правильный ответ, то компьютер даст вам
+                        подсказку. У вас будет три попытки и две подсказки.
+                    </p>
+                    <button class="button">Играть</button>
+                </div>
+                <!-- <picture class="play__banner">
+                  <img src="./img/undraw_video_game.svg" alt="Геймпад" srcset="" />
+              </picture> -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__wrapper">Все права защищены</div>
+        </footer>
+
+        <script src="./js/games.js"></script>
+    </body>
 </html>

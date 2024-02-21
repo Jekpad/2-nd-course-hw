@@ -118,9 +118,6 @@ body {
   justify-content: space-between;
   flex-flow: row;
 }
-.play_inverted {
-  flex-flow: row-reverse;
-}
 .play__info {
   display: flex;
   flex-flow: column;
@@ -134,6 +131,26 @@ body {
 }
 .play__banner {
   max-width: 485px;
+}
+.play_inverted {
+  flex-flow: row-reverse;
+}
+.play_center {
+  justify-content: center;
+}
+.play_center .play__info {
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 1200px;
+}
+.play_center .play__info * {
+  text-align: center;
+}
+.play_questions {
+  background: linear-gradient(180deg, rgb(0, 9, 21), rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) -7.355%, rgb(0, 9, 21) 100%), url("../img/mouse.jpeg"), rgb(0, 9, 21);
+  background-position: center;
+  background-size: cover;
 }
 
 .top {
@@ -197,6 +214,17 @@ body {
   background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url("/img/game3.jpg"), lightgray 50%/cover no-repeat;
 }
 
+.footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.footer__wrapper {
+  font-size: 12px;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
 @media (width <= 1250px) {
   .center {
     padding-left: 50px;
@@ -243,6 +271,9 @@ body {
   }
   .play__text {
     text-align: center;
+  }
+  .play_center .play__info {
+    width: auto;
   }
 }
 @media (width <= 890px) {

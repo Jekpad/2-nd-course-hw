@@ -12,3 +12,67 @@ function game1() {
         alert(`Указанного месяца не существует`);
     }
 }
+
+function game2() {
+    let fruits = ["Яблоко", "Груша", "Дыня", "Виноград", "Персик", "Апельсин", "Мандарин"];
+    let answerCount = 0;
+
+    fruits = fruits.sort(() => Math.random() - 0.5);
+
+    alert(
+        `Привет!
+        \nСейчас на экране будет показан список слов, которые нужно запомнить и затем повторить в следующем окошке.
+        \nГотов?
+        \nПоехали!`
+    );
+
+    alert(
+        `А вот и слова:
+        \n${fruits.join(", ")}
+        \n\nЗапомни их хорошенько и повтори в следующем окошке через запятую (,)`
+    );
+
+    let userAnswer = prompt("Повтори слова через запятую (,):");
+
+    userAnswer = userAnswer.split(",");
+    userAnswer = userAnswer.map((item) => item.trim().toLowerCase());
+    fruits = fruits.map((item) => item.trim().toLowerCase());
+    let bufferAnswer = [];
+
+    for (let item of userAnswer) {
+        if (fruits.includes(item) && !bufferAnswer.includes(item)) {
+            answerCount += 1;
+            bufferAnswer.push(item);
+        }
+    }
+
+    let result = Math.round((answerCount / fruits.length) * 100);
+    console.log(userAnswer, answerCount, result);
+
+    if (result > 0 && result <= 40) {
+        alert(
+            `Вы отгадали ${answerCount} из ${fruits.length}
+            \nВ следующий раз постарайтесь лучше!`
+        );
+    } else if (result < 100) {
+        alert(
+            `Вы отгадали ${answerCount} из ${fruits.length}
+            \nУспех так близок! Ещё разок?`
+        );
+    } else if (result <= 100) {
+        alert(
+            `Вы отгадали ${answerCount} из ${fruits.length}!
+            \nWinner-winner, chicken dinner!`
+        );
+    } else if (result > 100) {
+        alert(
+            `Вы отгадали ${answerCount} из ${fruits.length}!
+            \nНе знаю, как вы смогли переиграть меня, но это нехороший поступок >:C`
+        );
+    } else {
+        alert(
+            `Вы ничего не отгадали...
+            \nПопробуйте ещё раз и перечитайте задание.`
+        );
+    }
+}

@@ -26,7 +26,7 @@ findMinMaxValues(array);
 
 // 5
 function getRandomValue() {
-    return Math.round(Math.random() * 10);
+    return Math.round(Math.random() * (10 - 1) + 1);
 }
 console.log(getRandomValue());
 
@@ -63,9 +63,8 @@ console.log(getCurrentDate());
 let currentDate = new Date();
 let daysOffset = 73;
 function getFutureDate(date, daysOffset) {
-    date = +date;
-    daysOffset = daysOffset * 24 * 60 * 60 * 1000;
-    return new Date(date + daysOffset);
+    date.setDate(date.getDate() + daysOffset);
+    return date;
 }
 console.log(getFutureDate(currentDate, daysOffset));
 
@@ -77,8 +76,12 @@ function formatDateInRussian(date) {
     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
     const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 
-    return `Дата: ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} - это ${
-        days[date.getDay()]
-    }\nВремя: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    return `Дата: ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} - это ${days[date.getDay()]}
+    \nВремя: ${beautifyTime(date.getHours())}:${beautifyTime(date.getMinutes())}:${beautifyTime(date.getSeconds())}`;
 }
+
+function beautifyTime(number) {
+    return number < 10 ? `0${number}` : number;
+}
+
 console.log(formatDateInRussian(new Date()));

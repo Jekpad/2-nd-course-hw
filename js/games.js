@@ -32,7 +32,7 @@ function game2() {
         \n\nЗапомни их хорошенько и повтори в следующем окошке через запятую (,)`
     );
 
-    let userAnswer = prompt("Повтори слова через запятую (,):");
+    let userAnswer = prompt("Повтори слова через запятую (,):") ?? "";
 
     userAnswer = userAnswer.split(",");
     userAnswer = userAnswer.map((item) => item.trim().toLowerCase());
